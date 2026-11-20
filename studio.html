@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101715" />
+  <title>Content Studio — Satyanand Dubey Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="data/portfolio.js" defer></script>
+  <script src="studio.js" defer></script>
+</head>
+<body class="studio-page">
+  <header class="studio-header"><div><h1>✳ CONTENT STUDIO</h1><p>SATYANAND DUBEY / PORTFOLIO MANAGER</p></div><a href="index.html">← BACK TO PORTFOLIO</a></header>
+  <main class="studio-wrap">
+    <div class="studio-intro"><div><span class="section-index">LOCAL EDITING WORKSPACE</span><h2>Update your work.<br />Keep your story current.</h2><p>Add, edit or remove videos and update your profile details here. Changes are saved in this browser first. Export the updated portfolio file and replace <code>data/portfolio.js</code> before publishing for everyone to see.</p></div><div class="studio-actions"><button class="studio-btn primary" id="exportJs">↓ EXPORT portfolio.js</button><button class="studio-btn" id="exportJson">↓ EXPORT JSON</button><label class="studio-btn" for="importJson">↑ IMPORT JSON</label><input type="file" id="importJson" accept=".json,application/json" hidden /></div></div>
+
+    <section class="studio-card"><h3>01 / YOUR PROFILE</h3><div class="studio-grid">
+      <div class="studio-field"><label for="pName">DISPLAY NAME</label><input id="pName" /></div>
+      <div class="studio-field"><label for="pBrand">BRAND / HANDLE</label><input id="pBrand" /></div>
+      <div class="studio-field"><label for="pRole">ROLE</label><input id="pRole" /></div>
+      <div class="studio-field"><label for="pLocation">LOCATION</label><input id="pLocation" /></div>
+      <div class="studio-field"><label for="pAvailability">AVAILABILITY STATUS</label><input id="pAvailability" /></div>
+      <div class="studio-field"><label for="pEmail">EMAIL</label><input id="pEmail" type="email" /></div>
+      <div class="studio-field"><label for="pInstagram">INSTAGRAM PROFILE URL</label><input id="pInstagram" /></div>
+      <div class="studio-field"><label for="pPhone">PHONE (INTERNATIONAL FORMAT)</label><input id="pPhone" /></div>
+      <div class="studio-field"><label for="pWhatsapp">WHATSAPP (COUNTRY CODE + NUMBER)</label><input id="pWhatsapp" /></div>
+      <div class="studio-field"><label for="pAgency">AGENCY / COLLABORATION</label><input id="pAgency" /></div>
+      <div class="studio-field"><label for="pAgencyLocation">AGENCY LOCATION</label><input id="pAgencyLocation" /></div>
+      <div class="studio-field"><label for="pTools">TOOLS (COMMA-SEPARATED)</label><input id="pTools" /></div>
+      <div class="studio-field full"><label for="pIntro">HERO INTRO</label><textarea id="pIntro"></textarea></div>
+      <div class="studio-field full"><label for="pAbout">ABOUT PARAGRAPH</label><textarea id="pAbout"></textarea></div>
+      <div class="studio-field full"><label for="pApproach">YOUR EDITING APPROACH</label><textarea id="pApproach"></textarea></div>
+    </div><div class="studio-actions" style="margin-top:16px"><button class="studio-btn primary" id="saveProfile">SAVE PROFILE CHANGES</button></div></section>
+
+    <section class="studio-card"><h3>02 / ADD OR UPDATE A VIDEO PROJECT</h3><form id="projectForm"><input type="hidden" id="projectId" /><div class="studio-grid">
+      <div class="studio-field"><label for="projectTitle">PROJECT TITLE</label><input id="projectTitle" required placeholder="e.g. A Journey Through The Hills" /></div>
+      <div class="studio-field"><label for="projectCategory">CATEGORY</label><select id="projectCategory"><option>Short-form</option><option>Long-form</option><option>Short Films</option><option>Brand Film</option><option>Other</option></select></div>
+      <div class="studio-field"><label for="projectFormat">FORMAT LABEL</label><input id="projectFormat" placeholder="VERTICAL / 9:16" /></div>
+      <div class="studio-field"><label for="projectYear">YEAR</label><input id="projectYear" placeholder="2026" /></div>
+      <div class="studio-field"><label for="projectType">VIDEO SOURCE TYPE</label><select id="projectType"><option value="mp4">MP4 / Direct video URL</option><option value="youtube">YouTube</option><option value="vimeo">Vimeo</option></select></div>
+      <div class="studio-field"><label for="projectAccent">CARD COLOUR ACCENT</label><select id="projectAccent"><option value="lime">Lime</option><option value="coral">Coral</option><option value="blue">Blue</option><option value="violet">Violet</option><option value="gold">Gold</option></select></div>
+      <div class="studio-field full"><label for="projectVideo">VIDEO URL OR FILE PATH</label><input id="projectVideo" placeholder="assets/reels/my-edit.mp4 or https://..." /></div>
+      <div class="studio-field full"><label for="projectPoster">POSTER / THUMBNAIL IMAGE PATH OR URL (OPTIONAL)</label><input id="projectPoster" placeholder="assets/posters/my-edit.jpg" /></div>
+      <div class="studio-field full"><label for="projectDescription">PROJECT DESCRIPTION</label><textarea id="projectDescription" placeholder="A sentence about the story, style or editing approach."></textarea></div>
+    </div><div class="studio-actions" style="margin-top:16px"><button class="studio-btn primary" type="submit" id="saveProject">ADD PROJECT</button><button class="studio-btn" type="button" id="cancelEdit" hidden>CANCEL EDIT</button></div></form><p class="studio-help">For MP4: put the exported video inside <code>assets/reels/</code> and enter its path, or paste a direct MP4 URL. For YouTube/Vimeo, select the matching source type and paste the share URL. An Instagram profile/Reel share URL is not a direct MP4 video source.</p></section>
+
+    <section class="studio-card"><h3>03 / YOUR PROJECT LIBRARY <span id="projectTotal"></span></h3><div class="studio-list" id="projectList"></div><p class="studio-help">Edit updates the project form above. Delete removes it from this browser's draft and from the next exported file. Your original <code>data/portfolio.js</code> remains unchanged until you replace it with the exported version.</p></section>
+
+    <section class="studio-card"><h3>04 / ADVANCED DATA EDITOR</h3><p class="studio-help" style="margin:0 0 12px">For full control over statistics, services, project order or any other setting, edit the complete JSON data below. Click “Validate & Save JSON” to apply it. Keep the JSON structure valid.</p><div class="studio-field"><label for="rawData">PORTFOLIO DATA JSON</label><textarea id="rawData" spellcheck="false" style="min-height:310px;font-family:var(--mono);font-size:10px"></textarea></div><div class="studio-actions" style="margin-top:13px"><button class="studio-btn primary" id="applyJson">VALIDATE & SAVE JSON</button><button class="studio-btn" id="resetLocal">RESET THIS BROWSER DRAFT</button></div></section>
+    <p class="studio-status" id="studioStatus" role="status">Ready. Your edits are local until you export and publish them.</p>
+  </main>
+</body>
+</html>

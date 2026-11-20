@@ -1,0 +1,2 @@
+Copy your exported MP4 videos into this folder.
+Example path to use in Content Studio: assets/reels/my-edit.mp4

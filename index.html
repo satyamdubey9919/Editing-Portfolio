@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101715" />
+  <meta name="description" content="Satyanand Dubey — video editor and visual storyteller. Short-form reels, YouTube edits and cinematic storytelling." />
+  <meta property="og:title" content="Satyanand Dubey — Video Editor & Visual Storyteller" />
+  <meta property="og:description" content="Cut with rhythm. Built around a story." />
+  <title>Satyanand Dubey — Video Editor & Visual Storyteller</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="data/portfolio.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-progress" id="pageProgress"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Satyanand Dubey home">
+      <span class="brand-mark">S<span>✳</span></span>
+      <span class="brand-copy"><strong id="brandName">SATYANAND DUBEY</strong><small>EDITOR / STORYTELLER</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">Selected work <i>01</i></a>
+      <a href="#about">The editor <i>02</i></a>
+      <a href="#services">What I do <i>03</i></a>
+      <a class="nav-contact" href="#contact">Let’s talk <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-main">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="live-dot"></span><span id="availability">AVAILABLE FOR SELECT PROJECTS</span><span class="eyebrow-city" id="heroLocation">PRAYAGRAJ / INDIA</span></p>
+          <p class="hero-pretitle">VIDEO EDITOR <b>✳</b> VISUAL STORYTELLER</p>
+          <h1 id="heroTitle">Cut with rhythm.<br /><em>Built around</em><br />a story<span class="hero-period">.</span></h1>
+          <p class="hero-intro" id="heroIntro">I turn raw footage into stories that move people — from scroll-stopping vertical edits to long-form films with a little more room to breathe.</p>
+          <div class="hero-actions">
+            <a class="button button-lime" href="#work">Explore the work <span>↘</span></a>
+            <a class="underlined-link" href="#contact">Have a project? <span>↗</span></a>
+          </div>
+          <div class="hero-footline"><span>STORY FIRST / ALWAYS</span><span class="footline-rule"></span><span>24 FPS STATE OF MIND</span></div>
+        </div>
+
+        <div class="edit-suite reveal" aria-label="Decorative video editing timeline interface">
+          <div class="suite-topbar"><div class="suite-brand"><span class="suite-dot"></span> FRAME / STUDIO</div><div class="suite-project">PROJECT_001 <span>● SAVED</span></div><div class="suite-window"><i></i><i></i><i></i></div></div>
+          <div class="suite-workspace">
+            <div class="suite-tools"><span class="tool-active">↖</span><span>▧</span><span>⌗</span><span>◌</span><span>⌁</span><span>✳</span></div>
+            <div class="preview-monitor">
+              <div class="monitor-meta"><span>PROGRAM / PREVIEW</span><span>00:00:18:12</span></div>
+              <div class="preview-art">
+                <div class="preview-sun"></div><div class="preview-mountain mountain-back"></div><div class="preview-mountain mountain-front"></div>
+                <div class="preview-copy"><small>SEQUENCE 01</small><strong>THE ART OF<br /><em>THE CUT.</em></strong><span>FRAME IT. FEEL IT.</span></div>
+                <div class="preview-crosshair">+</div>
+              </div>
+              <div class="monitor-controls"><span>◀</span><span class="monitor-play">▶</span><span>▶</span><span class="monitor-time">00:18 / 01:24</span><span>FIT ▾</span></div>
+            </div>
+            <div class="suite-side-panel"><span class="panel-heading">CLIP INFO</span><div class="clip-thumb"></div><b>Sequence_01.mov</b><small>3840 × 2160</small><div class="panel-data"><span>FPS</span><b>24</b><span>FORMAT</span><b>4K / UHD</b><span>COLOR</span><b>FILM LOOK</b></div><div class="audio-meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          </div>
+          <div class="timeline-area">
+            <div class="timeline-toolbar"><span>TIMELINE</span><span>00:00:00:00</span><span>⌕</span></div>
+            <div class="timeline-ruler"><span>00:00</span><span>00:10</span><span>00:20</span><span>00:30</span><span>00:40</span><span>00:50</span></div>
+            <div class="timeline-tracks">
+              <div class="track-label">V2</div><div class="track-lane"><span class="clip clip-title">TITLE / OPEN</span><span class="clip clip-overlay">OVERLAY</span></div>
+              <div class="track-label">V1</div><div class="track-lane"><span class="clip clip-video">A-ROLL_01</span><span class="clip clip-video2">B-ROLL_02</span><span class="clip clip-video3">CUTAWAY</span></div>
+              <div class="track-label">A1</div><div class="track-lane"><span class="clip clip-audio">MUSIC / AMBIENCE</span><span class="clip clip-audio2">SFX</span></div>
+              <div class="playhead"><span></span></div>
+            </div>
+          </div>
+          <div class="suite-status"><span>✳ CREATIVE MODE</span><span>SMOOTH CUTS / CLEAR STORIES</span><span>100%</span></div>
+          <div class="suite-floating-tag">150+<small>REELS CUT</small></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="hero-scroll">↓</span><span>DESIGNED TO MAKE YOU FEEL SOMETHING</span></div>
+    </section>
+
+    <section class="marquee" aria-label="Creative principles"><div class="marquee-track"><span>STORY OVER EFFECTS</span><b>✳</b><span>RHYTHM IN EVERY CUT</span><b>✳</b><span>DETAILS MATTER</span><b>✳</b><span>STORY OVER EFFECTS</span><b>✳</b><span>RHYTHM IN EVERY CUT</span><b>✳</b><span>DETAILS MATTER</span><b>✳</b></div></section>
+
+    <section class="stats-section section-shell">
+      <div class="stats-intro"><span class="section-index">01 / THE EXPERIENCE</span><p>Different formats.<br /><em>One obsession:</em> the story.</p></div>
+      <div class="stats-grid" id="statsGrid"></div>
+    </section>
+
+    <section class="work-section section-shell" id="work">
+      <div class="section-heading reveal"><div><span class="section-index">02 / SELECTED WORK</span><h2>Proof is in<br /><em>the playback.</em></h2></div><p class="section-note">A growing collection of edits, frames and stories. Choose a format and press play.</p></div>
+      <div class="work-toolbar"><div class="filters" id="filterRow" aria-label="Filter projects"></div><span class="work-count" id="workCount">06 PROJECT SLOTS</span></div>
+      <div class="project-grid" id="projectGrid"></div>
+      <div class="work-note"><span>THE EDIT BAY IS ALWAYS OPEN FOR A GOOD STORY.</span><span>↗</span></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-inner section-shell">
+        <div class="about-top"><span class="section-index">03 / BEHIND THE CUT</span><span class="about-stamp">SD<br /><small>VISUALS</small></span></div>
+        <div class="about-grid">
+          <div class="about-headline reveal"><h2>Not just<br />a cut.<br /><em>A feeling.</em></h2><div class="about-side-note">THE BEST EDITS DON’T ASK FOR ATTENTION.<br />THEY EARN IT.</div></div>
+          <div class="about-copy reveal"><p class="about-lead" id="aboutText">I’m Satyanand — a video editor who believes every cut should have a reason. I work across short-form content, long-form YouTube videos and short films, bringing together pacing, sound, mood and visual detail to make the story land.</p><p id="approachText">My process starts with the feeling behind the footage. Then I shape the structure, build the rhythm, refine the sound and polish the final frame — always keeping the audience and platform in mind.</p><div class="tools-wrap"><span class="mini-label">TOOLS I CREATE WITH</span><div class="tools-list" id="toolsList"></div></div></div>
+        </div>
+        <div class="agency-card reveal"><div class="agency-symbol">✳</div><div><span class="mini-label">COLLABORATION / CREATIVE EXPERIENCE</span><h3 id="agencyName">Quinreach Creative Marketing Agency</h3><p id="agencyLocation">Prayagraj, India</p></div><span class="agency-arrow">↗</span></div>
+      </div>
+    </section>
+
+    <section class="services-section section-shell" id="services">
+      <div class="section-heading reveal"><div><span class="section-index">04 / WHAT I DO</span><h2>Make it move.<br /><em>Make it matter.</em></h2></div><p class="section-note">The right edit doesn’t just look good. It gives the message a rhythm and a reason to stay.</p></div>
+      <div class="service-list" id="serviceList"></div>
+    </section>
+
+    <section class="process-section section-shell">
+      <div class="process-heading reveal"><span class="section-index">05 / THE EDITING PROCESS</span><h2>From raw clips<br />to <em>final feeling.</em></h2><p>Every project gets a clear flow. No random transitions for the sake of it.</p></div>
+      <div class="process-steps">
+        <article class="process-step reveal"><span>01</span><div class="step-icon">⌕</div><h3>Understand</h3><p>Brief, audience, platform and the feeling the video needs to leave behind.</p></article>
+        <article class="process-step reveal"><span>02</span><div class="step-icon">▤</div><h3>Shape the story</h3><p>Footage selection, structure, hook and pacing — before the polish begins.</p></article>
+        <article class="process-step reveal"><span>03</span><div class="step-icon">◉</div><h3>Build the edit</h3><p>Transitions, sound design, music, captions, colour and all the little details.</p></article>
+        <article class="process-step reveal"><span>04</span><div class="step-icon">↗</div><h3>Deliver</h3><p>Review, refine and export in the right format, ready for its audience.</p></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-orbit orbit-one"></div><div class="contact-orbit orbit-two"></div>
+      <div class="contact-inner section-shell reveal"><span class="section-index">06 / GOT A STORY?</span><p class="contact-kicker">LET’S MAKE SOMETHING THAT STAYS.</p><h2>Have a vision?<br /><em>Let’s frame it.</em></h2><p class="contact-copy">Have footage, a channel, a brand or an idea taking shape? Let’s talk about the story you want to tell.</p>
+        <div class="contact-actions"><a class="button button-lime" id="emailButton" href="mailto:dubeysatyam222201@gmail.com">Start a conversation <span>↗</span></a><a class="button button-outline" id="whatsappButton" href="https://wa.me/916389944594" target="_blank" rel="noreferrer">WhatsApp me <span>↗</span></a></div>
+        <div class="contact-details"><a id="emailText" href="mailto:dubeysatyam222201@gmail.com">dubeysatyam222201@gmail.com</a><a id="phoneText" href="tel:+916389944594">+91 63899 4594</a><a id="instagramLink" href="https://www.instagram.com/visualssatyam/" target="_blank" rel="noreferrer">@visualssatyam ↗</a></div>
+      </div>
+      <div class="contact-bottom section-shell"><span>BASED IN PRAYAGRAJ / WORKING EVERYWHERE</span><span>GOOD STORIES TRAVEL.</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#top">SD<span>✳</span></a><span>© <span id="year"></span> SATYANAND DUBEY / EDITED WITH INTENTION</span><a href="#top">BACK TO TOP ↑</a></footer>
+
+  <div class="video-modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel"><div class="modal-top"><div><span class="mini-label">NOW PLAYING / PROJECT PREVIEW</span><h3 id="modalTitle">Project title</h3></div><button class="modal-close" id="modalClose" aria-label="Close video player">×</button></div><div class="modal-player" id="modalPlayer"></div><div class="modal-bottom"><span id="modalCategory">PROJECT CATEGORY</span><span>MADE WITH FEELING ✳</span></div></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

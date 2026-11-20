@@ -1,0 +1,2 @@
+Copy your video poster / thumbnail images into this folder.
+Example path to use in Content Studio: assets/posters/my-edit.jpg
